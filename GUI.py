@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import ImageTk, Image
 from FinTrinity import FinTrinity
 from time import sleep
 
@@ -28,7 +29,7 @@ class GUI:
                                onvalue=idx + 1, offvalue=0, command=self.game_select)
             cbox.grid(sticky=W, column=1, row=row)
             self.checkboxes.append(cbox)
-            self.game_images.append(PhotoImage(file=game.image))
+            self.game_images.append(ImageTk.PhotoImage(Image.open(game.image)))
             row += 1
 
         self.game_canvas = Canvas(self.window, width=144, height=80)
