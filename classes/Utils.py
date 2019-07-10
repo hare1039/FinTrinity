@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import platform
 import stat
+import plistlib
 from subprocess import call
 
 
